@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Travel_App.MainPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="Beige">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <RelativeLayout WidthRequest="200">
+                <Label Text="" RelativeLayout.YConstraint="15" TextColor="DarkOrange" FontSize="18"/>
+                <Image Source="Add.png" HeightRequest="10" WidthRequest="10" RelativeLayout.XConstraint="325">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="imgTap" Tapped="imgTap_Tapped"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <!--<Button x:Name="btnadd" ImageSource="Add.pngxx" RelativeLayout.XConstraint="300" Clicked="btnadd_Clicked" WidthRequest="25" HeightRequest="25"></Button> -->
+                <!--Reference - https://www.freepnglogos.com/images/plus-icon-21715.html-->
+            </RelativeLayout>
+        </Frame>
+        <ListView x:Name="lvTrips" ItemSelected="lvTrips_ItemSelected"></ListView>
+        <Label x:Name="lbltours" IsVisible="false"></Label>
+        <Label Text="No tours?" FontSize="25" Padding="30,10,30,10" TextColor="DarkOrange"/>
+        <Label Text="You can use the symbol in the top right to add a tour" TextColor="DarkOrange" Padding="30,10,30,10" FontSize="20"></Label>
+    </StackLayout>
+</ContentPage>

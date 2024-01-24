@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Travel_App.Trips"
+             BackgroundColor="Beige"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <RelativeLayout WidthRequest="200">
+                <Label Text="Welcome to my Travel App!!" HorizontalOptions="Start" TextColor="DarkOrange" FontSize="Medium"/>
+            </RelativeLayout>
+        </Frame>
+        <Frame BackgroundColor="Transparent" BorderColor="DarkOrange" HeightRequest="20"> <!--img ref https://en.wikipedia.org/wiki/Brighton-->
+            <Label Text="Brighton" TextColor="DarkOrange">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="lbltap" Tapped="lbltap_Tapped"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+        </Frame>
+        <Frame BackgroundColor="Transparent" BorderColor="DarkOrange" x:Name="frswipe"> <!--img ref https://www.google.com/url?sa=i&url=https%3A%2F%2Fmichaeljones.co.uk%2Fnews%2F6-reasons-to-move-to-worthing%2F&psig=AOvVaw15GxHUPOlIvuiLnLfrFtEd&ust=1682616612424000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMCexb2JyP4CFQAAAAAdAAAAABAR-->
+            <Frame.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Left" Swiped="SwipeGestureRecognizer_Swiped">
+                </SwipeGestureRecognizer>
+            </Frame.GestureRecognizers>
+            <Label Text="Worthing" x:Name="lbltest" TextColor="DarkOrange"></Label>
+        </Frame>
+
+    </StackLayout>
+</ContentPage>

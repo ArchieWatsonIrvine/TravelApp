@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Travel_App.firstpage"
+             BackgroundColor="Beige"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Label></Label>
+            <Label></Label>
+            <Image Source="TravelLogoApp.png" HorizontalOptions="Center"></Image> <!--ref https://www.123rf.com/photo_112357348_stock-vector-traveling-vector-icon-isolated-on-transparent-background-traveling-transparency-logo-concept.html-->
+            <Label></Label>
+            <Label></Label>
+            <Button Text="Lets get started!" TextColor="DarkOrange" BackgroundColor="Gray" x:Name="btnStart" Clicked="btnStart_Clicked" BorderWidth="250"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Travel_App.addTour" NavigationPage.HasNavigationBar="False" BackgroundColor="Beige">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <RelativeLayout WidthRequest="200">
+                    <Label Text="Add a tour here" HorizontalOptions="Center" TextColor="DarkOrange" FontSize="Medium"/>
+                </RelativeLayout>
+            </Frame>
+
+            <Entry Placeholder="Email:" x:Name="entEmail" PlaceholderColor="DarkOrange" TextColor="DarkOrange" HorizontalOptions="Center" WidthRequest="250"></Entry>
+            <Label></Label>
+            <Entry Placeholder="Tour number:" x:Name="entNum" PlaceholderColor="DarkOrange" TextColor="DarkOrange" HorizontalOptions="Center" WidthRequest="250"></Entry>
+            <Label></Label>
+            <!--Will want this to be a pop up message error-->
+            <Label x:Name="lblErr" TextColor="Red" IsVisible="false" Text="Invalid input"></Label>
+            <Button x:Name="btnSub" Text="Submit" Clicked="btnSub_Clicked"></Button>
+            <Label Text="Register email here:" HorizontalOptions="Center" FontSize="11" TextColor="LightBlue">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="tapreg" Tapped="tapreg_Tapped"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

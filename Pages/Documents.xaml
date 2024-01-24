@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit" 
+             x:Class="Travel_App.Documents"
+             Title="Documents"
+             BackgroundColor="Beige"
+             NavigationPage.HasNavigationBar="False">
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <FlexLayout>
+                <Button Text="back" x:Name="btnback" Clicked="btnback_Clicked" FontSize="11" BackgroundColor="Transparent" TextColor="DarkOrange" ></Button>
+                <Image Source="Camera.png" WidthRequest="50" RelativeLayout.XConstraint="200" x:Name="camBtn">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="imgCam" Tapped="imgCam_Tapped"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+                <!--<Button Text="Camera" x:Name="btnphoto" Clicked="btnphoto_Clicked" FontSize="11" BackgroundColor="Transparent" TextColor="DarkOrange" RelativeLayout.XConstraint="300"></Button>-->
+                </FlexLayout>
+            </Frame>
+        <StackLayout>
+            <Image x:Name="imgphoto"></Image>
+            <Button x:Name="btnRetake" Text="Retake Photo" Clicked="btnRetake_Clicked" IsVisible="false"></Button>
+            <Button x:Name="btnAdd" Text="Add another picture" IsVisible="false" Clicked="btnAdd_Clicked"></Button>
+            <Button x:Name="btnDelete" Text="Delete Image" IsVisible="false" Clicked="btnDelete_Clicked"></Button>
+        </StackLayout>
+    </StackLayout>
+
+    
+</ContentPage>

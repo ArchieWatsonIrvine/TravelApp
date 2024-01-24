@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Travel_App.BrightonTour"
+             BackgroundColor="Beige"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             NavigationPage.HasNavigationBar="False">
+        <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <RelativeLayout WidthRequest="200">
+                    <Button Text="back" x:Name="btnback" Clicked="btnback_Clicked" RelativeLayout.YConstraint="5" BackgroundColor="Transparent"></Button>
+                    <Label Text="Brighton" HorizontalOptions="Start" RelativeLayout.XConstraint="140" RelativeLayout.YConstraint="15" TextColor="DarkOrange" FontSize="Medium"/>
+                <Image Source="Documents.jpg" RelativeLayout.XConstraint="300" RelativeLayout.YConstraint="15" WidthRequest="25" HeightRequest="25">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="imgdoc" Tapped="imgdoc_Tapped"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image> <!--img ref https://www.google.com/url?sa=i&url=https%3A%2F%2Ffavpng.com%2Fpng_view%2Fprocurement-icon-document-file-format-apple-icon-image-format-png%2FChQdnT5Y&psig=AOvVaw2yehFhJqrwPirfWhXd4q8l&ust=1682616815194000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNjLtJ6KyP4CFQAAAAAdAAAAABAE-->
+            </RelativeLayout>
+            </Frame>
+            <StackLayout>
+                <!--Map goes here-->
+                <!--Implement pins-->
+                <maps:Map x:Name="map" HeightRequest="250" IsShowingUser="True"></maps:Map>
+            <ListView x:Name="lvBrighton" ItemSelected="lvBrighton_ItemSelected"></ListView>
+        </StackLayout>
+        </StackLayout>
+        <!--Will make a bunch of info with onclick and swipe events-->
+</ContentPage>

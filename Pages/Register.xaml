@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Travel_App.Register"
+             BackgroundColor="Beige"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <RelativeLayout WidthRequest="200">
+                    <Button Text="back" x:Name="btnback" Clicked="btnback_Clicked" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent"></Button>
+                    <Label Text="Register" RelativeLayout.XConstraint="140" RelativeLayout.YConstraint="15" TextColor="DarkOrange" FontSize="Medium"/>
+                </RelativeLayout>
+            </Frame>
+
+            <Entry Placeholder="Email:" x:Name="entEmail" PlaceholderColor="DarkOrange" TextColor="DarkOrange" HorizontalOptions="Center" WidthRequest="250"></Entry>
+                <Label></Label>
+                <!--Will want this to be a pop up message error-->
+            <Label x:Name="lblErr" TextColor="Red" IsVisible="false" Text="Invalid input"></Label>
+            
+            <Button x:Name="btnReg" Text="Register" Clicked="btnReg_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
