@@ -33,6 +33,8 @@ namespace Travel_App
             TripHelper.addTrip(tp);
         }
 
+        //Init list of tour ids
+
         protected override void OnSleep()
         {
         }
